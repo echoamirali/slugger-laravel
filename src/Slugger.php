@@ -4,5 +4,11 @@ namespace Echoamirali\Slugger;
 
 class Slugger
 {
-    // Build your next great package.
+    public function do_initial($slug)
+    {
+        $slug = preg_replace('/\s+/', '-', $slug);
+        $slug = strtolower($slug);
+    }
+
+    
 }
