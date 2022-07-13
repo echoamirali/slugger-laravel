@@ -8,10 +8,9 @@ class Slugger
 {
     public function do_initial($slug)
     {
-        $slug = self::do_translate($slug);
         $slug = trim($slug);
-        $slug = preg_replace('/\s+/', '-', $slug);
-        $slug = strtolower($slug);
+        $slug = self::do_translate($slug);
+        $slug = preg_replace('/\s+/u', '-', $slug);
         return $slug;
     }
 
