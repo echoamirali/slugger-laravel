@@ -11,6 +11,7 @@ class Slugger
         $slug = trim($slug);
         $slug = self::do_translate($slug);
         $slug = preg_replace('/\s+/u', '-', $slug);
+        $slug = mb_strtolower($slug);
         return $slug;
     }
 
