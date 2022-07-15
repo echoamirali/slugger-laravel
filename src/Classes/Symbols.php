@@ -16,7 +16,7 @@ class Symbols {
                 $this->range = $this->fillDecimalLeadingZero();
                 break;
         endswitch;
-
+        var_dump($this->range);
     }
 
     protected function fillDecimalLeadingZero()
@@ -24,5 +24,12 @@ class Symbols {
         foreach(range(1, 99) as $number):
             $this->range[] = sprintf('%03d', $number);
         endforeach;
+    }
+
+    public function get()
+    {
+        array_unshift($this->range, "");
+        unset($this->range[0]);
+        return $this->range;
     }
 }
