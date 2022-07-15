@@ -14,6 +14,7 @@ class Symbols {
                 break;
             case 'decimal_leading_zero':
                 $this->range = $this->fillDecimalLeadingZero();
+                break;
         endswitch;
 
     }
@@ -21,7 +22,7 @@ class Symbols {
     protected function fillDecimalLeadingZero()
     {
         foreach(range(1, 99) as $number):
-
+            $this->range[] = sprintf('%03d', $number);
         endforeach;
     }
 }
