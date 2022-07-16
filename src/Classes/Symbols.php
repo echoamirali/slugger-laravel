@@ -13,17 +13,15 @@ class Symbols {
                 $this->range = range(1,99);
                 break;
             case 'decimal_leading_zero':
-                $this->range = $this->fillDecimalLeadingZero();
+                $this->range = array_map(function($val){
+                    return sprintf('%03d', $val);
+                }, range(1,99));
                 break;
-        endswitch;
-        var_dump($this->range);
-    }
+            case 'alphabet':
+                $this->range = range('a', 'z');
+                break;
 
-    protected function fillDecimalLeadingZero()
-    {
-        foreach(range(1, 99) as $number):
-            $this->range[] = sprintf('%03d', $number);
-        endforeach;
+        endswitch;
     }
 
     public function get()
