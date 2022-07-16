@@ -11,7 +11,7 @@ class SluggerStepsTest extends TestCase {
     /** @test */
     function display_types_of_symbols()
     {
-        $symbols = new Symbols('decimal');
+        $symbols = new Symbols('numbers_in_word');
         var_dump($symbols->get());
     }
 
