@@ -24,7 +24,16 @@ class Symbols {
             case 'cardinal_numbers':
                 $this->range = $this->fillCardinalNumbers();
                 break;
+            case 'ordinal_numbers':
+                $this->range = array_map([get_called_class(), 'ordinalNumber'], range(1,99));
         endswitch;
+    }
+
+    public function ordinalNumber($number)
+    {
+        $locale = 'en_US';
+        $nf = new \NumberFormatter($locale, \NumberFormatter::ORDINAL);
+        return $nf->format($number);
     }
 
     public function numberToRoman($number) {
