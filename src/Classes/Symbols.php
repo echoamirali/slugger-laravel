@@ -21,8 +21,8 @@ class Symbols {
             case 'roman':
                 $this->range = array_map([get_called_class(), 'numberToRoman'], range(1,99));
                 break;
-            case 'numbers_in_word':
-                $this->range = $this->fillNumbersInWord();
+            case 'cardinal_numbers':
+                $this->range = $this->fillCardinalNumbers();
                 break;
         endswitch;
     }
@@ -47,7 +47,7 @@ class Symbols {
         return sprintf('%03d', $number);
     }
 
-    public function fillNumbersInWord()
+    public function fillCardinalNumbers()
     {
         return ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
         "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty",
