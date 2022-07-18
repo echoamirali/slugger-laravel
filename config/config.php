@@ -9,6 +9,9 @@ return [
     'translate_to' => 'en',
     'field' => 'slug',
     'pattern' => '',
-    //decimal_leading_zero, alphabet, roman, numbers_in_word, cardinal_number, ordinal_number
-    'iteration_symbol' => 'decimal'
+    //decimal_leading_zero, roman, numbers_in_word, cardinal_number, ordinal_number
+    'iteration_symbol' => 'decimal',
+    'custom_iteration_symbols' => [
+        'alphabet' => range('a', 'z')
+    ]
 ];
