@@ -24,6 +24,12 @@ class Symbols {
             case 'ordinal_numbers':
                 $this->range = array_map([get_called_class(), 'ordinalNumber'], range(1,99));
                 break;
+            default:
+                if( in_array($symbol, array_keys(config('slugger.custom_iteration_symbols'))) )
+                    $this->range = config('slugger.custom_iteration_symbols.'.$symbol);
+                else
+                    $this->range = range(1,99);
+                break;
         endswitch;
     }
 
