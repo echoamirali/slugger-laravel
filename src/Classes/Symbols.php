@@ -15,9 +15,6 @@ class Symbols {
             case 'decimal_leading_zero':
                 $this->range = array_map([get_called_class(), 'addLeadingZero'], range(1,99));
                 break;
-            case 'alphabet':
-                $this->range = range('a', 'z');
-                break;
             case 'roman':
                 $this->range = array_map([get_called_class(), 'numberToRoman'], range(1,99));
                 break;
@@ -26,6 +23,7 @@ class Symbols {
                 break;
             case 'ordinal_numbers':
                 $this->range = array_map([get_called_class(), 'ordinalNumber'], range(1,99));
+                break;
         endswitch;
     }
 
