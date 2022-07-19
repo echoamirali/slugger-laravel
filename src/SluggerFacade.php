@@ -4,9 +4,7 @@ namespace Echoamirali\Slugger;
 
 use Illuminate\Support\Facades\Facade;
 
-/**
- * @see \Echoamirali\Slugger\Skeleton\SkeletonClass
- */
+
 class SluggerFacade extends Facade
 {
     /**
