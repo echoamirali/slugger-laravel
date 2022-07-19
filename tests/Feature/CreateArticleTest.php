@@ -8,7 +8,7 @@ use Echoamirali\Slugger\Tests\Article;
 
 class CreateArticleTest extends TestCase {
 
-    use RefreshDatabase;
+    // use RefreshDatabase;
 
     /** @test */
     function create_new_article()
@@ -18,6 +18,6 @@ class CreateArticleTest extends TestCase {
             'slug' => 'slug'
         ]);
 
-        $this->assertEquals('slug-1', $article);
+        $this->assertEquals('slug-1', $article->slug);
     }
 }
