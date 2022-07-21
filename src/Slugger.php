@@ -19,9 +19,11 @@ class Slugger
     {
         $translator = new GoogleTranslate();
             
-        $slug = $translator->translate('en', 'fa', $slug);
+        $slug = $translator->translate(config('slugger.translate_from'), config('slugger.translate_to'), $slug);
 
         return $slug;
     }
+
+
     
 }
