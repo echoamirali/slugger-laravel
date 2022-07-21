@@ -9,7 +9,9 @@ return [
     'do_tranlate' => true,
     'translate_from' => 'fa',
     'translate_to' => 'en',
-    'pattern' => '',
+    'do_pattern' => true,
+    //you can implement string with #string#
+    'pattern' => 'hi-#string#-bye',
     //just use for model trait
     'field' => 'slug',
     //available options for iteration_symbol : decimal, decimal_leading_zero, roman, numbers_in_word, ordinal_number
