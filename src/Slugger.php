@@ -6,22 +6,22 @@ use Echoamirali\Slugger\Classes\GoogleTranslate;
 
 class Slugger
 {
-    public function do_initial($slug)
+    public function do_initial($string)
     {
-        $slug = trim($slug);
-        $slug = self::do_translate($slug);
-        $slug = preg_replace('/\s+/u', '-', $slug);
-        $slug = mb_strtolower($slug);
-        return $slug;
+        $string = trim($string);
+        $string = self::do_translate($string);
+        $string = preg_replace('/\s+/u', '-', $string);
+        $string = mb_strtolower($string);
+        return $string;
     }
 
-    public static function do_translate($slug)
+    public static function do_translate($string)
     {
         $translator = new GoogleTranslate();
             
-        $slug = $translator->translate(config('slugger.translate_from'), config('slugger.translate_to'), $slug);
+        $string = $translator->translate(config('slugger.translate_from'), config('slugger.translate_to'), $string);
 
-        return $slug;
+        return $string;
     }
 
 
