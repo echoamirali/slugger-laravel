@@ -24,7 +24,11 @@ class Slugger
         return $string;
     }
 
-
+    
+    public static function doPattern($pattern, $string)
+    {
+        return str_replace('#string#', $string, $pattern);
+    }
 
     
 }
