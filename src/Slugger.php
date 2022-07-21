@@ -6,7 +6,7 @@ use Echoamirali\Slugger\Classes\GoogleTranslate;
 
 class Slugger
 {
-    public function do_initial($string)
+    public static function doInitial($string)
     {
         $string = trim($string);
         $string = self::do_translate($string);
@@ -15,14 +15,15 @@ class Slugger
         return $string;
     }
 
-    public static function do_translate($string)
+    public static function doTranslate($string, $from, $to)
     {
         $translator = new GoogleTranslate();
             
-        $string = $translator->translate(config('slugger.translate_from'), config('slugger.translate_to'), $string);
+        $string = $translator->translate($from, $to, $string);
 
         return $string;
     }
+
 
 
     
