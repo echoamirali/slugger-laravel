@@ -6,7 +6,7 @@
 return [
     //like trim spaces, change characters to lowercase , changed spaces to hyphen, ...
     'do_initial' => true,
-    'do_tranlate' => true,
+    'do_translate' => true,
     'translate_from' => 'fa',
     'translate_to' => 'en',
     'do_pattern' => true,
