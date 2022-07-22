@@ -30,5 +30,8 @@ class Slugger
         return str_replace('#string#', $string, $pattern);
     }
 
-    
+    public static function make($string)
+    {
+
+    }
 }
