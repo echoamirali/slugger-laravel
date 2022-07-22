@@ -15,4 +15,10 @@ class SluggerStepsTest extends TestCase {
         var_dump($symbols->get());
     }
 
+    /** @test */
+    function display_slugger_main_method()
+    {
+        die(Slugger::make('سلام چطوری خوبی'));
+    }
+
 }
