@@ -9,7 +9,6 @@ class Slugger
     public static function doInitial($string)
     {
         $string = trim($string);
-        $string = self::do_translate($string);
         $string = preg_replace('/\s+/u', '-', $string);
         $string = mb_strtolower($string);
         return $string;
@@ -30,8 +29,11 @@ class Slugger
         return str_replace('#string#', $string, $pattern);
     }
 
-    public static function make($string)
+    public static function make($string, $from_config = true, $config_options = null)
     {
-
+        $config = $from_config ? config('slugger') : $config_options;
+        if( isset($config['do_initial']) && $config['do_initial'] )
+            $string = self::doInitial($string);
+        return $string;
     }
 }
