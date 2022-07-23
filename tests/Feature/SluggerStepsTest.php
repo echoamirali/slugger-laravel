@@ -18,7 +18,7 @@ class SluggerStepsTest extends TestCase {
     /** @test */
     function display_slugger_main_method()
     {
-        die(Slugger::make('سلام چطوری خوبی'));
+        die(Slugger::make());
     }
 
 }
