@@ -37,8 +37,8 @@ class Slugger
             $string = self::doTranslate($string, $config['translate_from'], $config['translate_to']);
         if( isset($config['do_initial']) && $config['do_initial'] )
             $string = self::doInitial($string);
-        if( isset($config['do_pattern']) && $config['do_pattern'] )
-            $string = self::doPattern($string);
+        if( isset($config['do_pattern'], $config['pattern']) && $config['do_pattern'])
+            $string = self::doPattern($string, $config['pattern']);
         return $string;
     }
 }
