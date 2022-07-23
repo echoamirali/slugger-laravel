@@ -29,10 +29,11 @@ class Slugger
     {
         return str_replace('#string#', $string, $pattern);
     }
-
-    public static function make($string, $from_config = true, $config_options = null)
+    // config status options = config_file, config_options, overwrite
+    public static function make($string, $config_status = 'config_file' , $config_options = null)
     {
-        $config = $from_config ? config('slugger') : $config_options;
+        // $config = $from_config ? config('slugger') : $config_options;
+        $config = config('slugger');
         if( isset($config['do_translate'], $config['translate_from'], $config['translate_to']) && $config['do_translate'] )
             $string = self::doTranslate($string, $config['translate_from'], $config['translate_to']);
         if( isset($config['do_initial']) && $config['do_initial'] )
