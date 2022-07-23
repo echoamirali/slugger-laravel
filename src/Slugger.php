@@ -38,7 +38,7 @@ class Slugger
         if( isset($config['do_initial']) && $config['do_initial'] )
             $string = self::doInitial($string);
         if( isset($config['do_pattern'], $config['pattern']) && $config['do_pattern'])
-            $string = self::doPattern($string, $config['pattern']);
+            $string = self::doPattern($config['pattern'], $string);
         return $string;
     }
 }
