@@ -45,16 +45,14 @@ class Slugger
             default:
                 $config = config('slugger');
                 break;
-
         endswitch;
+        return $config;
     }
 
     // config status options = config_file, config_options, config_mixed
     public static function make($string, $config_status = 'config_file' , $config_options = null)
     {
-        // $config = $from_config ? config('slugger') : $config_options;
-        // $config = $config_status == ''config('slugger');
-        $this->prepareConfig($config_status, $config_options);
+        $config = $this->prepareConfig($config_status, $config_options);
         if( isset($config['do_translate'], $config['translate_from'], $config['translate_to']) && $config['do_translate'] )
             $string = self::doTranslate($string, $config['translate_from'], $config['translate_to']);
         if( isset($config['do_initial']) && $config['do_initial'] )
