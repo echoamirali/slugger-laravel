@@ -34,10 +34,22 @@ class Slugger
 
     public function prepareConfig($config_status, $config_options)
     {
+        switch($config_status):
+            case 'config_mixed':
+                $config = array_merge(config('slugger'), $config_options);
+                break;
+            case 'config_options':
+                $config = $config_options;
+                break;
+            case 'config_file':
+            default:
+                $config = config('slugger');
+                break;
 
+        endswitch;
     }
 
-    // config status options = config_file, config_options, overwrite
+    // config status options = config_file, config_options, config_mixed
     public static function make($string, $config_status = 'config_file' , $config_options = null)
     {
         // $config = $from_config ? config('slugger') : $config_options;
