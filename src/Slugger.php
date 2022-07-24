@@ -6,7 +6,7 @@ use Echoamirali\Slugger\Classes\GoogleTranslate;
 
 class Slugger
 {
-    protected $config = [];
+    protected static $config = [];
 
     public static function doInitial($string)
     {
@@ -36,14 +36,14 @@ class Slugger
     {
         switch($config_status):
             case 'config_mixed':
-                $this->config = array_merge(config('slugger'), $config_options);
+                self::$config = array_merge(config('slugger'), $config_options);
                 break;
             case 'config_options':
-                $this->config = $config_options;
+                self::$config = $config_options;
                 break;
             case 'config_file':
             default:
-                $this->config = config('slugger');
+                self::$config = config('slugger');
                 break;
         endswitch;
     }
@@ -52,12 +52,12 @@ class Slugger
     public static function make($string, $config_status = 'config_file' , $config_options = null)
     {
         self::prepareConfig($config_status, $config_options);
-        if( isset($this->config['do_translate'], $this->config['translate_from'], $this->config['translate_to']) && $this->config['do_translate'] )
-            $string = self::doTranslate($string, $this->config['translate_from'], $this->config['translate_to']);
-        if( isset($this->config['do_initial']) && $this->config['do_initial'] )
+        if( isset(self::$config['do_translate'], self::$config['translate_from'], self::$config['translate_to']) && self::$config['do_translate'] )
+            $string = self::doTranslate($string, self::$config['translate_from'], self::$config['translate_to']);
+        if( isset(self::$config['do_initial']) && self::$config['do_initial'] )
             $string = self::doInitial($string);
-        if( isset($this->config['do_pattern'], $this->config['pattern']) && $this->config['do_pattern'])
-            $string = self::doPattern($this->config['pattern'], $string);
+        if( isset(self::$config['do_pattern'], self::$config['pattern']) && self::$config['do_pattern'])
+            $string = self::doPattern(self::$config['pattern'], $string);
         return $string;
     }
 }

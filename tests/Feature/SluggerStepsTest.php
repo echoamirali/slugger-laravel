@@ -18,7 +18,7 @@ class SluggerStepsTest extends TestCase {
     /** @test */
     function display_slugger_main_method()
     {
-        die(Slugger::make());
+        die(Slugger::make('test method now'));
     }
 
 }
