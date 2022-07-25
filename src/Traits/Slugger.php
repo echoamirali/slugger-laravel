@@ -3,16 +3,16 @@
 namespace Echoamirali\Slugger\Traits;
 use Echoamirali\Slugger\Slugger as MainSlugger;
 
-class Slugger {
+trait Slugger {
     
     public function setSlugAttribute($value)
     {
-        $this->attributes['slug'] = strtolower($value);
+        $this->attributes['slug'] = $this->make($value);
     }
 
-    public function make()
+    public function make($string)
     {
-        MainSlugger::make();
+        return MainSlugger::make($string);
     }
 
 }
