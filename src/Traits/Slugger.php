@@ -12,9 +12,14 @@ trait Slugger {
         return parent::setAttribute($key, $value);
     }
 
+    public function makeUnique($slug)
+    {
+        
+    }
+
     public function make($string)
     {
-        return MainSlugger::make($string);
+        $slug = MainSlugger::make($string);
     }
 
 }
