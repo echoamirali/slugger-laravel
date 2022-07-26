@@ -3,6 +3,7 @@
 namespace Echoamirali\Slugger;
 
 use Echoamirali\Slugger\Classes\GoogleTranslate;
+use Echoamirali\Slugger\Classes\Symbols;
 
 class Slugger
 {
@@ -46,6 +47,12 @@ class Slugger
                 self::$config = config('slugger');
                 break;
         endswitch;
+    }
+
+    public static function symbolsArray($iteration_symbol = null)
+    {
+        $iteration_symbol = empty($iteration_symbol) ? config('slugger.iteration_symbol') : $iteration_symbol;
+        return ( new Symbols($iteration_symbol) )->get();
     }
 
     // config status options = config_file, config_options, config_mixed
