@@ -13,7 +13,7 @@ return [
     //you can implement string with #string#
     'pattern' => 'hi-#string#-bye',
     //just use for model trait
-    'field' => 'slug',
+    'field' => 'title',
     //available options for iteration_symbol : decimal, decimal_leading_zero, roman, numbers_in_word, ordinal_number
     'iteration_symbol' => 'decimal',
     'custom_iteration_symbols' => [
