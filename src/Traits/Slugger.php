@@ -5,9 +5,11 @@ use Echoamirali\Slugger\Slugger as MainSlugger;
 
 trait Slugger {
     
-    public function setSlugAttribute($value)
+    public function setAttribute($key, $value)
     {
-        $this->attributes['slug'] = $this->make($value);
+        if( $key == config('slugger.field') )
+            return parent::setAttribute($key, $this->make($value));
+        return parent::setAttribute($key, $value);
     }
 
     public function make($string)
