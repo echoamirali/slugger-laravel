@@ -18,7 +18,7 @@ class SluggerStepsTest extends TestCase {
     /** @test */
     function display_slugger_main_method()
     {
-        die(Slugger::make('test method now', 'config_mixed', ['do_translate' => false]));
+        die(var_dump(Slugger::symbolsArray()));
     }
 
 }
