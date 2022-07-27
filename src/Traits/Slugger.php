@@ -28,7 +28,9 @@ trait Slugger {
     public function make($string)
     {
         $slug = MainSlugger::make($string);
-        return $this->makeUnique($slug);
+        if( config('slugger.is_unique') )
+            return $this->makeUnique($slug);
+        return $slug;
     }
 
 }
