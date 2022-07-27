@@ -22,7 +22,6 @@ trait Slugger {
             $slug = $raw_slug."-".$symbol;
             $index++;
         }
-        die($slug);
         return $slug;
     }
 
