@@ -18,7 +18,8 @@ trait Slugger {
         $symbols = MainSlugger::symbolsArray();
         $raw_slug = $slug;
         while ( $this->query()->where(config('slugger.field'), $slug)->exists() ) {
-            $slug = $raw_slug."-".$symbols[$index];
+            $symbol = isset($symbols[$index]) ? $symbols[$index] : $index;
+            $slug = $raw_slug."-".$symbol;
             $index++;
         }
         die($slug);
