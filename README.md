@@ -28,8 +28,33 @@ $ composer update
 
 ## Usage
 
+- **Step 1**:
+
+Head to **config/app.php** and add this line to the end of **providers** Array:
+
 ```php
-// Usage description here
+Echoamirali\Slugger\SluggerServiceProvider::class,
+```
+
+So that array must me something like this:
+
+```php
+'providers' => [
+		/*
+		* Laravel Framework Service Providers...
+		*/
+		.
+		.
+		Echoamirali\Slugger\SluggerServiceProvider::class
+]
+```
+
+- **Step 2**:
+
+Then in the **config/app.php** and add this line to the end of **aliases** Array:
+
+```php
+'Slugger' => Echoamirali\Slugger\SluggerFacade::class,
 ```
 
 ### Testing
