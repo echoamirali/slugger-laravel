@@ -33,7 +33,7 @@ class Slugger
         return str_replace('#string#', $string, $pattern);
     }
 
-    public function prepareConfig($config_status, $config_options)
+    public static function prepareConfig($config_status, $config_options)
     {
         switch($config_status):
             case 'config_mixed':
