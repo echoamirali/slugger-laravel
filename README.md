@@ -44,7 +44,7 @@ Then in the **config/app.php** and add this line to the end of **aliases** Array
 'Slugger' => Echoamirali\Slugger\SluggerFacade::class,
 ```
 
-- **Step 3**
+- **Step 3**:
 
 Run this command in your project dirctory:
 
@@ -52,11 +52,6 @@ Run this command in your project dirctory:
 php artisan vendor:publish
 ```
 
-### Testing
-
-```bash
-composer test
-```
 
 ### Changelog
 
