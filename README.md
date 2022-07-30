@@ -59,26 +59,39 @@ You can configure package, for this head to **config/slugger.php**
 
 ```php
 return [
-    /** if do initail option be true, package do some operations on your string like
+    /**
+     * if do initail option be true, package do some operations on your string like
      * trims spaces, changes characters to lowercase , changes spaces to hyphen, ...
     **/
     'do_initial' => false,
-    /** if do translate option be true, package translate your string from 'translate_from' option
-     * to 'translate_to' option at the first even before do initial
+    /**
+     * if do translate option be true, package translate your string from 'translate_from'
+     * option to 'translate_to' option at the first even before do initial
     **/ 
     'do_translate' => false,
     'translate_from' => 'fa',
     'translate_to' => 'en',
-    /** if do pattern option be true, package implement your string into
+    /**
+     * if do pattern option be true, package implement your string into
      * your pattern define in pattern option instead of #string# 
     **/
     'do_pattern' => false,
     'pattern' => '',
-    //just use for model trait
-    'field' => 'slug',
+    /**
+     * first of all you should know remain options only use in laravel models for 
+     * avoid repetition and when you put true in 'is_unique' option they work
+    **/
     'is_unique' => false,
-    //available options for iteration_symbol : decimal, decimal_leading_zero, roman, numbers_in_word, ordinal_number
+    // put your database column in this option, that you want be unique
+    'field' => 'slug',
+    /**
+     * this package use some symbols for avoid repetition and you can
+     * choose which you want and put it in 'iteration_symbol' option.
+     * available options for are : 
+     * decimal, decimal_leading_zero, roman, numbers_in_word, ordinal_number
+     **/
     'iteration_symbol' => 'decimal',
+    //you can add your custom symbols in this option like alphabet
     'custom_iteration_symbols' => [
         'alphabet' => range('a', 'z')
 ];
