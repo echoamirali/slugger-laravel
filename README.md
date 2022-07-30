@@ -52,6 +52,10 @@ Run this command in your project dirctory:
 php artisan vendor:publish
 ```
 
+In the message appear, find the number of Slugger, enter the related number then hit Enter.
+
+
+
 
 ### Changelog
 
