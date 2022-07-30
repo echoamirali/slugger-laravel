@@ -4,18 +4,14 @@
  * You can place your custom package configuration in here.
  */
 return [
-    //like trim spaces, change characters to lowercase , changed spaces to hyphen, ...
     'do_initial' => false,
     'do_translate' => false,
     'translate_from' => 'fa',
     'translate_to' => 'en',
-    //you can implement string with #string#
     'do_pattern' => false,
     'pattern' => '',
-    //just use for model trait
-    'field' => 'slug',
     'is_unique' => false,
-    //available options for iteration_symbol : decimal, decimal_leading_zero, roman, numbers_in_word, ordinal_number
+    'field' => 'slug',
     'iteration_symbol' => 'decimal',
     'custom_iteration_symbols' => [
         'alphabet' => range('a', 'z'),
