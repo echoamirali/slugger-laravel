@@ -47,12 +47,35 @@ Then in the **config/app.php** and add this line to the end of **aliases** Array
 
 Run this command in your project dirctory:
 
-```
+```bash
 php artisan vendor:publish
 ```
 
 In the message appear, find the number of Slugger, enter the related number then hit Enter.
 
+### Step 5
+
+You can configure package, for this head to **config/slugger.php**
+
+```php
+return [
+    //like trim spaces, change characters to lowercase , changed spaces to hyphen, ...
+    'do_initial' => false,
+    'do_translate' => false,
+    'translate_from' => 'fa',
+    'translate_to' => 'en',
+    //you can implement string with #string#
+    'do_pattern' => false,
+    'pattern' => '',
+    //just use for model trait
+    'field' => 'slug',
+    'is_unique' => false,
+    //available options for iteration_symbol : decimal, decimal_leading_zero, roman, numbers_in_word, ordinal_number
+    'iteration_symbol' => 'decimal',
+    'custom_iteration_symbols' => [
+        'alphabet' => range('a', 'z')
+];
+```
 
 
 
