@@ -59,7 +59,9 @@ You can configure package, for this head to **config/slugger.php**
 
 ```php
 return [
-    //like trim spaces, change characters to lowercase , changed spaces to hyphen, ...
+    /** if do initail option be true package do some operations like
+    trim spaces, change characters to lowercase , changed spaces to hyphen, ...
+    **/
     'do_initial' => false,
     'do_translate' => false,
     'translate_from' => 'fa',
