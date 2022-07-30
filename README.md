@@ -5,6 +5,8 @@
 
 ## Installation
 
+### Step 1
+
 - **Method 1**:
 You can install the package via composer:
 
@@ -25,10 +27,7 @@ Then run following command to download extension using **composer**
 $ composer update
 ```
 
-
-## Usage
-
-- **Step 1**:
+### Step 2
 
 Head to **config/app.php** and add this line to the end of **providers** Array:
 
@@ -36,7 +35,7 @@ Head to **config/app.php** and add this line to the end of **providers** Array:
 Echoamirali\Slugger\SluggerServiceProvider::class,
 ```
 
-- **Step 2**:
+### Step 3
 
 Then in the **config/app.php** and add this line to the end of **aliases** Array:
 
@@ -44,7 +43,7 @@ Then in the **config/app.php** and add this line to the end of **aliases** Array
 'Slugger' => Echoamirali\Slugger\SluggerFacade::class,
 ```
 
-- **Step 3**:
+### Step 4
 
 Run this command in your project dirctory:
 
