@@ -94,6 +94,7 @@ return [
     //you can add your custom symbols in this option like alphabet
     'custom_iteration_symbols' => [
         'alphabet' => range('a', 'z')
+    ]
 ];
 ```
 
