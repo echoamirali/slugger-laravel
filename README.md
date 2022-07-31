@@ -136,6 +136,16 @@ First use the trait:
 use Echoamirali\Slugger\Traits\Slugger;
 ```
 
+Then use Slugger trait in your model:
+
+```php
+class Post extends Model {
+
+    use Slugger;
+
+}
+```
+
 You should know Slugger trait only use config file options.
 
 ### Changelog
