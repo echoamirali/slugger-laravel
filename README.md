@@ -108,6 +108,14 @@ You can use the package where ever you want.
 use Slugger;
 ```
 
+Then use this pattern to slugify your string:
+
+```php
+
+$slug = Slugger::make($string);
+
+```
+
 
 ### Changelog
 
