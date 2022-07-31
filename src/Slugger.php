@@ -55,7 +55,6 @@ class Slugger
         return ( new Symbols($iteration_symbol) )->get();
     }
 
-    // config status options = config_file, config_options, config_mixed
     public static function make($string, $config_status = 'config_file' , $config_options = null)
     {
         self::prepareConfig($config_status, $config_options);

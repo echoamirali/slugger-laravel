@@ -114,7 +114,7 @@ Then use this pattern to slugify your string:
 $slug = Slugger::make($string);
 ```
 
-Slugger 'make' method has to optional parameters then you can use when you dont want to use config file or merge some options to config file options
+Slugger 'make' method has two optional parameters then you can use when you dont want to use config file or merge some options to config file options
 
 ```php
 /** this parameter has three available options
