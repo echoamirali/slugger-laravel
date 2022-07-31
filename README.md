@@ -102,7 +102,7 @@ return [
 
 You can use the package where ever you want.
 
-- First use the class:
+First use the class:
 
 ```php
 use Slugger;
@@ -128,7 +128,13 @@ $config_options = ['do_initial' => false, 'do_translate' => false];
 $slug = Slugger::make($string, $config_status, $config_options);
 ```
 
+Also you can use Slugger in your models.
 
+First use the trait:
+
+```php
+use Echoamirali\Slugger\Traits\Slugger;
+```
 
 ### Changelog
 
