@@ -98,6 +98,15 @@ return [
 ];
 ```
 
+## Usage
+
+You can use the package where ever you want.
+
+- First use the class:
+
+```php
+use Slugger;
+```
 
 
 ### Changelog
