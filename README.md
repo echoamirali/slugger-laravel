@@ -111,10 +111,23 @@ use Slugger;
 Then use this pattern to slugify your string:
 
 ```php
-
 $slug = Slugger::make($string);
-
 ```
+
+Slugger 'make' method has to optional parameters then you can use when you dont want to use config file or merge some options to config file options
+
+```php
+/** this parameter has three available options
+ * config_file : this is default option and when you choose this option, package use config file options
+ * config_options : when you choose this option, you can put your options in config_options parameter
+ * config_mixed : when you choose this option, you can put your options in config_options parameter and package merge your options with config file options
+**/
+$config_status = 'config_options';
+// when you choose option except config_file, you should put your options in this parameter
+$config_options = ['do_initial' => false, 'do_translate' => false];
+$slug = Slugger::make($string, $config_status, $config_options);
+```
+
 
 
 ### Changelog
