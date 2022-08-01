@@ -87,7 +87,7 @@ return [
     /**
      * this package use some symbols for avoid repetition and you can
      * choose which you want and put it in 'iteration_symbol' option.
-     * available options for are : 
+     * available options for iteration_symbol are : 
      * decimal, decimal_leading_zero, roman, numbers_in_word, ordinal_number
      **/
     'iteration_symbol' => 'decimal',
@@ -146,7 +146,7 @@ class Post extends Model {
 }
 ```
 
-You should know Slugger trait only use config file options.
+If you want to use Slugger for some models with different options, you can define specific options for any model.
 
 ### Changelog
 
