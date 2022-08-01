@@ -1,4 +1,4 @@
-# A simple package for create simple slug.
+# Make standard slug.
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/echoamirali/slugger.svg?style=flat-square)](https://packagist.org/packages/echoamirali/slugger)
 [![Total Downloads](https://img.shields.io/packagist/dt/echoamirali/slugger.svg?style=flat-square)](https://packagist.org/packages/echoamirali/slugger)
@@ -29,7 +29,7 @@ $ composer update
 
 ### Step 2
 
-Head to **config/app.php** and add this line to the end of **providers** Array:
+Open the **config/app.php** file and add this line to the end of **providers** Array:
 
 ```php
 Echoamirali\Slugger\SluggerServiceProvider::class,
@@ -60,19 +60,19 @@ You can configure package, for this head to **config/slugger.php**
 ```php
 return [
     /**
-     * if do initail option be true, package do some operations on your string like
+     * if do initail option is true, package do some operations on your string like
      * trims spaces, changes characters to lowercase , changes spaces to hyphen, ...
     **/
     'do_initial' => false,
     /**
-     * if do translate option be true, package translate your string from 'translate_from'
+     * if do translate option is true, package translate your string from 'translate_from'
      * option to 'translate_to' option at the first even before do initial
     **/ 
     'do_translate' => false,
     'translate_from' => 'fa',
     'translate_to' => 'en',
     /**
-     * if do pattern option be true, package implement your string into
+     * if do pattern option is true, package implement your string into
      * your pattern define in pattern option instead of #string# 
     **/
     'do_pattern' => false,
