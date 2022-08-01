@@ -5,7 +5,7 @@ use Echoamirali\Slugger\Slugger as MainSlugger;
 
 trait Slugger {
     
-    public $slugger_config = [];
+    // public $slugger_config = [];
 
     public function setAttribute($key, $value)
     {
