@@ -158,6 +158,7 @@ class Post extends Model {
 }
 
 ```
+Put your model config like slugger config file structure in slugger config property.
 
 ### Changelog
 
