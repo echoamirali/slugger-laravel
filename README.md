@@ -148,6 +148,17 @@ class Post extends Model {
 
 If you want to use Slugger for some models with different options, you can define specific options for any model.
 
+```php
+
+class Post extends Model {
+
+    use Slugger;
+
+    public $slugger_config = [];
+}
+
+```
+
 ### Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
