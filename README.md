@@ -159,7 +159,7 @@ class Post extends Model {
 
 ```
 Put your model config like slugger config file structure in slugger config property.
-If you add only is_unique option in slugger config property package use remain option from slugger config file. 
+For Example if you add only is_unique option in slugger config property package use remain option from slugger config file. 
 
 ### Changelog
 
